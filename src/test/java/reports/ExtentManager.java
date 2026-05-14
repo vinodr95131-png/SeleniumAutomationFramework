@@ -9,8 +9,7 @@ public class ExtentManager {
 
     public static ExtentReports getReportObject() {
 
-        String reportPath = System.getProperty("user.dir")
-                + "/reports/TestReport.html";
+        String reportPath = System.getProperty("user.dir") + "/reports/TestReport.html";
 
         ExtentSparkReporter reporter =
                 new ExtentSparkReporter(reportPath);
