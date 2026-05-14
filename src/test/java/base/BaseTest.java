@@ -1,5 +1,6 @@
 package base;
 
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,9 +23,9 @@ public class BaseTest {
         return tlDriver.get();
     }
 
-    @Parameters("browser")
     @BeforeMethod
-    public void setUp(String browser) throws IOException {
+    @Parameters("browser")
+    public void setUp(@Optional("chrome") String browser) throws IOException {
         ConfigReader configReader =
                 new ConfigReader();
 
